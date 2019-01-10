@@ -2,11 +2,22 @@
   box-sizing: border-box;
 }
 header{
-  background:url('img/background_section.jpg');
+  background: #F45EEF;
+  width: 100%;
+  margin: 0 auto;
 }
 header nav{
   text-align: center;
   color: black;
-  background-color: red;
   padding-left: 20px;
+  padding-top: 50px;
+  padding: 20px;
+  text-decoration: none;
+}
+body{
+  background:url('img/background_section.jpg');
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Unna', serif;
 }

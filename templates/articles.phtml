@@ -1,0 +1,22 @@
+<article class="articleSide">
+  <header>
+    <h2><?= $articles['titre'] ?></h2>
+    <p><time><?= $articles['date_publication']?></time></p>
+    <h3><?= $articles['sous_titre'] ?></h3>
+  </header>
+  <section>
+    <?= $articles['corps'] ?>
+  </section>
+      <footer>
+        <p><time><?= $articles['date_creation']?></time></p>
+      </footer>
+</article>
+
+  <form action="/subscribe" method="post">
+  <fieldset>
+  <legend>GET MY LATEST UPDATE!</legend>
+  <input type="name" name="text" placeholder="first name">
+  <input type="email" name="email" placeholder="e.g anna@smith.com">
+  <button>Subscribe</button>
+  </fieldset>
+  </form>

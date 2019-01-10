@@ -1,44 +1,20 @@
-<article class="art1">
+<article class="articleSide">
   <header>
-    <h2><?= $billet['titre'] ?></h2>
-    <h3><?= $billet['sous_titre'] ?></h3>
+    <h2><?= $article['titre'] ?></h2>
+    <p><time><?= $article['date_publication']?></time></p>
+    <h3><?= $article['sous_titre'] ?></h3>
   </header>
   <section>
-    <?= $billet['corps_de_texte'] ?>
+    <?= $article['corps'] ?>
   </section>
-  <section>
-    <article class="art2">
-      <p>Lorem Ipsum</p>
       <footer>
-        <p>
-          Posted on
-          <time datetime="2015-05-16 19:00">May 16</time>
-          by Lisa.
-        </p>
+        <p><time><?= $article['date_creation']?></time></p>
       </footer>
-    </article>
-    <article class="art3">
-      <p>Les Islandais eux-mêmes détournent parfois des routes pour ne pas les déranger, mais oscillent entre conviction, superstition et indifférence. L’un d’eux, l’historien et anthropologue Magnus Skarphedinsson, propose une «  école des elfes » aux touristes souhaitant écouter des histoires à propos de cette cohabitation mystérieuse. Mais pour Hélène Magnússon, autre expatriée française qui conçoit des voyages thématiques sur le tricot (excursions réservées à des initiés sur islandtours.fr - Le blog d’Hélène Magnússon : helenemagnusson.com), ces créatures incarnent avant tout la nature. « Il suffit d’évoluer sur cette terre insulaire pour en comprendre le mysticisme, dit-elle. Vent, tempêtes, éruptions, brouillard… Je me sens minuscule, insignifiante et, en même temps, faisant partie d’un vaste monde. »
-      </p>
-      <footer>
-        <p>
-          Posted on
-          <time datetime="2015-05-17 19:00">May 17</time>
-          by Tom.
-        </p>
-      </footer>
-    </article>
-  </section>
-  <footer>
-    <p>
-      Posted on
-      <time datetime="2015-05-15 19:00">May 15</time>
-      by Staff.
-    </p>
-  </footer>
+      <?php foreach($article as $c) {
+              $selected = ($c['titre'] == $model['titre']) ? "selected" : "";
+              echo "<option value='" . $c['titre'] . "' $selected >" . $c['titre'] . "</option>";
+            } ?>
 </article>
-
-
 
   <form action="/subscribe" method="post">
   <fieldset>

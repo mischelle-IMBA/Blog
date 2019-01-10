@@ -1,18 +1,24 @@
-  <form action="register.php" method="post">
-      <div class="container">
-        <label for="email"><b>E-mail</b></label>
-        <input type="text" placeholder="Enter Email" name="uname" required>
+<section>
+  <article class="articleSide">
+    <header>
+      <h2><?= $articles['titre'] ?></h2>
+      <p><time><?= $articles['date_publication']?></time></p>
+      <h3><?= $articles['sous_titre'] ?></h3>
+    </header>
+    <section>
+      <?= $articles['corps'] ?>
+    </section>
+        <footer>
+          <p><time><?= $articles['date_creation']?></time></p>
+        </footer>
+  </article>
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-      </div>
-
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
-      </div>
+    <form action="/subscribe" method="post">
+    <fieldset>
+    <legend>GET MY LATEST UPDATE!</legend>
+    <input type="name" name="text" placeholder="first name">
+    <input type="email" name="email" placeholder="e.g anna@smith.com">
+    <button>Subscribe</button>
+    </fieldset>
+    </form>
+</section>
