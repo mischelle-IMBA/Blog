@@ -27,7 +27,7 @@ function findArticle(PDO $db, string $id)
       FROM `article`
       LIMIT 3'
     );
-    $req->execute([$article]);
+    $req->execute([$articles]);
     $results = $req->fetch(PDO::FETCH_ASSOC);
 
     return $results;

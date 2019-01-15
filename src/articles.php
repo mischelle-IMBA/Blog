@@ -4,7 +4,7 @@ include "repository/database.php";
 include "repository/articleRepository.php";
 
 
-$template ='articles.phtml';
+$template ='moreArticles.phtml';
 
 // include "../templates/about.phtml";
 

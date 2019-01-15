@@ -1,34 +1,27 @@
 <?php
-$template ='home';
+//session_start();
+include "repository/database.php";
+include "repository/articleRepository.php";
 
-include('repository/articleRepository.php');
-include('repository/database.php');
-include ('../templates/home.phtml');
-
+//$template ='home';//
 $db = openDatabase('Blog','root','troiswa');
-
-$articles = findArticle($db, $_GET['id']);
-
+ //include "../templates/home.phtml";//
+ //$articles = findArticle($db, $_GET['id']);
 
 if (empty($_POST)) {
-
-
-} else {
-  articles($db, $_POST);
-
-   include "../templates/base.phtml";
-
-  var_dump($_POST);
-
+	$articles = [
+	'titre' =>'',
+	'sous_titre' =>'',
+	'date_publication' =>'',
+	'corps' =>'',
+	'date_creation' =>'',
+];
+$articles = findArticle($db, $_GET['id']);
+$action = "home.php";
+include "../templates/home.phtml";
 }
-
-
-?>
-
-
-
-
-
-
-
+else{
+	  header("Location: http://localhost/Développement/blog/src/home.php");
+		include "../templates/base.phtml";
+};
 ?>
